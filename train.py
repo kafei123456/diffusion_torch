@@ -94,13 +94,6 @@ def train(args):
                 plt.imshow(img)
             plt.savefig(f"./logs/images/{epoch}.png")
 
-            # labels = torch.arange(5).long().to(device)
-            # sampled_images = diffusion.sample(model, n=len(labels), labels=labels)
-            # ema_sampled_images = diffusion.sample(ema_model, n=len(labels), labels=labels)
-            # #plot_images(sampled_images)
-            # save_images(sampled_images, os.path.join("logs/images", f"{epoch}.jpg"))
-            # save_images(ema_sampled_images, os.path.join("logs/images", f"{epoch}_ema.jpg"))
-
 if __name__=="__main__":
     warnings.filterwarnings('ignore')
     parser = argparse.ArgumentParser(description="train diffusion models")
